@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+    /*don't write box-sizing border box or else the character will be above the border*/
+}
+h1{
+    font-family: Arcade;
+    text-align: center;
+    margin-top: 10%;
+    color: gray;
+}
+
+.container
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid black;
+    height: 200px;
+    width: 600px;
+    cursor: none;
+}
+
+.character
+{
+    height: 50px;
+    width: 50px;
+    background-image: url(trex.png);
+    background-size: 50px 50px;
+    position: relative;
+    top: 150px;
+
+    
+}
+.animate{animation: jump 500ms infinite;} 
+.block
+{
+    width: 20px;
+    height: 40px;
+    background-image: url(cactus.png); 
+    background-size: 20px 40px;
+     
+    position: relative;
+    top:110px;
+    animation: block 1s infinite linear;
+
+}
+
+@keyframes block
+{
+    0%{
+        left: 500px;
+    }
+
+    100%
+    {
+        left: -20px;
+        
+    }
+}
+
+@keyframes jump
+{
+    0%{
+        top: 150px;
+    }
+    30%{
+        top: 70px;
+    }
+
+    70%{
+        top: 70px;
+    }
+    100%{
+        top: 150px;
+    }
+}
